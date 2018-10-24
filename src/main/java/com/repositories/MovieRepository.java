@@ -7,10 +7,10 @@ import java.util.Optional;
 
 public interface MovieRepository extends MongoRepository<Movie, String> {
 
-
     @Override
     Optional<Movie> findById(String id);
 
     @Override
     void delete(Movie deleted);
+
 }
