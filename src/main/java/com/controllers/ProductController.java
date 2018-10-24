@@ -34,9 +34,9 @@ public class ProductController {
     }
 
     @RequestMapping(method=RequestMethod.PUT, value="/products/{id}")
-    public Product update(@PathVariable String id, @RequestBody Product product) {
+    public Product update(@PathVariable String id, @RequestBody Product requestedProduct) {
         Product prod = productRepository.findById(id).get();
-        prod.assignValuesFrom(product);
+        prod.assignValuesFrom(requestedProduct);
 
         productRepository.save(prod);
         return prod;
