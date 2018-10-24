@@ -22,6 +22,17 @@ public class Product {
         this.prodImage = prodImage;
     }
 
+    public void assignValuesFrom(Product product) {
+        if(product.getProdName() != null)
+            this.prodName = product.getProdName();
+        if(product.getProdDesc() != null)
+            this.prodDesc = product.getProdDesc();
+        if(product.getProdPrice() != null)
+            this.prodPrice = product.getProdPrice();
+        if(product.getProdImage() != null)
+            this.prodImage = product.getProdImage();
+    }
+
     public String getId() {
         return id;
     }

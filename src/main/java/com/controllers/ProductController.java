@@ -36,14 +36,8 @@ public class ProductController {
     @RequestMapping(method=RequestMethod.PUT, value="/products/{id}")
     public Product update(@PathVariable String id, @RequestBody Product product) {
         Product prod = productRepository.findById(id).get();
-        if(product.getProdName() != null)
-            prod.setProdName(product.getProdName());
-        if(product.getProdDesc() != null)
-            prod.setProdDesc(product.getProdDesc());
-        if(product.getProdPrice() != null)
-            prod.setProdPrice(product.getProdPrice());
-        if(product.getProdImage() != null)
-            prod.setProdImage(product.getProdImage());
+        prod.assignValuesFrom(product);
+
         productRepository.save(prod);
         return prod;
     }
@@ -53,6 +47,6 @@ public class ProductController {
         Product product = productRepository.findById(id).get();
         productRepository.delete(product);
 
-        return "product deleted";
+        return "Product deleted";
     }
 }
