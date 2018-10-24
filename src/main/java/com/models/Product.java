@@ -15,13 +15,6 @@ public class Product {
     Product() {
     }
 
-    Product(String prodName, String prodDesc, Double prodPrice, String prodImage) {
-        this.prodName = prodName;
-        this.prodDesc = prodDesc;
-        this.prodPrice = prodPrice;
-        this.prodImage = prodImage;
-    }
-
     public void assignValuesFrom(Product product) {
         if(product.getProdName() != null)
             this.prodName = product.getProdName();
