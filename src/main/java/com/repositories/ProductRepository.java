@@ -12,7 +12,7 @@ import java.util.Optional;
 public interface ProductRepository extends MongoRepository<Product, String> {
 
     @Override
-    public Optional<Product> findById(String id);
+    Optional<Product> findById(String id);
     @Override
     void delete(Product deleted);
 }
