@@ -12,10 +12,10 @@ public class Product {
     private Double prodPrice;
     private String prodImage;
 
-    public Product() {
+    Product() {
     }
 
-    public Product(String prodName, String prodDesc, Double prodPrice, String prodImage) {
+    Product(String prodName, String prodDesc, Double prodPrice, String prodImage) {
         this.prodName = prodName;
         this.prodDesc = prodDesc;
         this.prodPrice = prodPrice;
