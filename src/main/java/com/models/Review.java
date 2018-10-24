@@ -13,6 +13,19 @@ public class Review {
     private String reviewer;
     private String text;
 
+    public void assignValuesFrom(Review review) {
+        if(review.getId() != null)
+            this.id = review.getId();
+        if(review.getRating() != null)
+            this.rating = review.getRating();
+        if(review.getDate() != null)
+            this.date = review.getDate();
+        if(review.getReviewer() != null)
+            this.reviewer = review.getReviewer();
+        if(review.getText() != null)
+            this.text = review.getText();
+    }
+
     public String getId() {
         return id;
     }
