@@ -13,6 +13,17 @@ public class Movie {
     private String imdb;
     private String type;
 
+    public void assignValuesFrom(Movie movie) {
+        if(movie.getTitle() != null)
+            this.title = movie.getTitle();
+        if(movie.getYear() != null)
+            this.year = movie.getYear();
+        if(movie.getImdb() != null)
+            this.imdb = movie.getImdb();
+        if(movie.getType() != null)
+            this.type = movie.getType();
+    }
+
     public String getId() {
         return id;
     }
