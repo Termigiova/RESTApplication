@@ -1,7 +1,10 @@
 package com.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.Date;
 
 @Document(collection = "movieDetails")
 public class MovieDetail {
@@ -12,19 +15,29 @@ public class MovieDetail {
     private String director;
     private String plot;
     private String poster;
-    private String imdb;
-    private String tomato;
-    private String metacritic;
     private String type;
+    private String rated;
     private String[] countries;
     private String[] genres;
     private String[] writers;
     private String[] actors;
-    private String[] awards;
+    private Integer metacritic;
     private Integer year;
-    private Integer rated;
-    private Integer released;
     private Integer runtime;
+    private Date released;
+    @DBRef
+    private IMDB imdb;
+    @DBRef
+    private Awards awards;
+    @DBRef
+    private Tomato tomato;
+
+    public void assignValuesFrom(MovieDetail movieDetail) {
+        if(movieDetail.getTitle() != null)
+            this.title = movieDetail.getTitle();
+        if(movieDetail.getDirector() != null)
+            this.director = movieDetail.getDirector();
+    }
 
     public String getId() {
         return id;
@@ -66,36 +79,20 @@ public class MovieDetail {
         this.poster = poster;
     }
 
-    public String getImdb() {
-        return imdb;
-    }
-
-    public void setImdb(String imdb) {
-        this.imdb = imdb;
-    }
-
-    public String getTomato() {
-        return tomato;
-    }
-
-    public void setTomato(String tomato) {
-        this.tomato = tomato;
-    }
-
-    public String getMetacritic() {
-        return metacritic;
-    }
-
-    public void setMetacritic(String metacritic) {
-        this.metacritic = metacritic;
-    }
-
     public String getType() {
         return type;
     }
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getRated() {
+        return rated;
+    }
+
+    public void setRated(String rated) {
+        this.rated = rated;
     }
 
     public String[] getCountries() {
@@ -130,12 +127,12 @@ public class MovieDetail {
         this.actors = actors;
     }
 
-    public String[] getAwards() {
-        return awards;
+    public Integer getMetacritic() {
+        return metacritic;
     }
 
-    public void setAwards(String[] awards) {
-        this.awards = awards;
+    public void setMetacritic(Integer metacritic) {
+        this.metacritic = metacritic;
     }
 
     public Integer getYear() {
@@ -146,28 +143,44 @@ public class MovieDetail {
         this.year = year;
     }
 
-    public Integer getRated() {
-        return rated;
-    }
-
-    public void setRated(Integer rated) {
-        this.rated = rated;
-    }
-
-    public Integer getReleased() {
-        return released;
-    }
-
-    public void setReleased(Integer released) {
-        this.released = released;
-    }
-
     public Integer getRuntime() {
         return runtime;
     }
 
     public void setRuntime(Integer runtime) {
         this.runtime = runtime;
+    }
+
+    public Date getReleased() {
+        return released;
+    }
+
+    public void setReleased(Date released) {
+        this.released = released;
+    }
+
+    public IMDB getImdb() {
+        return imdb;
+    }
+
+    public void setImdb(IMDB imdb) {
+        this.imdb = imdb;
+    }
+
+    public Tomato getTomato() {
+        return tomato;
+    }
+
+    public void setTomato(Tomato tomato) {
+        this.tomato = tomato;
+    }
+
+    public Awards getAwards() {
+        return awards;
+    }
+
+    public void setAwards(Awards awards) {
+        this.awards = awards;
     }
 
 }
