@@ -21,6 +21,11 @@ public class ProductController {
         return productRepository.findAll();
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/products/{id}")
+    public Product getMovie(@PathVariable String id) {
+        return productRepository.findById(id).get();
+    }
+
     @RequestMapping(method=RequestMethod.POST, value="/products")
     public String save(@RequestBody Product product) {
         productRepository.save(product);
