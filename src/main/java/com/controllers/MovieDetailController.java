@@ -14,6 +14,11 @@ public class MovieDetailController {
     @RequestMapping(method = RequestMethod.GET, value = "/movieDetails")
     public Iterable<MovieDetail> movieDetail() { return movieDetailRepository.findAll(); }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/movieDetails/{id}")
+    public MovieDetail getMovie(@PathVariable String id) {
+        return movieDetailRepository.findById(id).get();
+    }
+
     @RequestMapping(method = RequestMethod.POST, value = "/movieDetails")
     public String save(@RequestBody MovieDetail movieDetail) {
         movieDetailRepository.save(movieDetail);
