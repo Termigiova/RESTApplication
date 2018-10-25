@@ -1,5 +1,6 @@
 package com.models;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -10,6 +11,10 @@ public class IMDB {
     private String id;
     private Integer rating;
     private Integer votes;
+
+    IMDB() {
+        this.id = new ObjectId().toString();
+    }
 
     public String getId() {
         return id;

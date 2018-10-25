@@ -25,11 +25,8 @@ public class MovieDetail {
     private Integer year;
     private Integer runtime;
     private Date released;
-    @DBRef
     private IMDB imdb;
-    @DBRef
     private Awards awards;
-    @DBRef
     private Tomato tomato;
 
     public void assignValuesFrom(MovieDetail movieDetail) {
@@ -37,6 +34,36 @@ public class MovieDetail {
             this.title = movieDetail.getTitle();
         if(movieDetail.getDirector() != null)
             this.director = movieDetail.getDirector();
+        if(movieDetail.getPlot() != null)
+            this.plot = movieDetail.getPlot();
+        if(movieDetail.getPoster() != null)
+            this.poster = movieDetail.getPoster();
+        if(movieDetail.getType() != null)
+            this.type = movieDetail.getType();
+        if(movieDetail.getRated() != null)
+            this.rated = movieDetail.getRated();
+        if(movieDetail.getCountries() != null)
+            this.countries = movieDetail.getCountries();
+        if(movieDetail.getDirector() != null)
+            this.genres = movieDetail.getGenres();
+        if(movieDetail.getWriters() != null)
+            this.writers = movieDetail.getWriters();
+        if(movieDetail.getActors() != null)
+            this.actors = movieDetail.getActors();
+        if(movieDetail.getMetacritic() != null)
+            this.metacritic = movieDetail.getMetacritic();
+        if(movieDetail.getYear() != null)
+            this.year = movieDetail.getYear();
+        if(movieDetail.getRuntime() != null)
+            this.runtime = movieDetail.getRuntime();
+        if(movieDetail.getReleased() != null)
+            this.released = movieDetail.getReleased();
+        if(movieDetail.getImdb() != null)
+            this.imdb = movieDetail.getImdb();
+        if(movieDetail.getAwards() != null)
+            this.awards = movieDetail.getAwards();
+        if(movieDetail.getTomato() != null)
+            this.tomato = movieDetail.getTomato();
     }
 
     public String getId() {
