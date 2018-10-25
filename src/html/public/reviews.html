@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reviews</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+	<div class="row">
+	    
+	    
+<link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+
+<!-- Structure -->
+
+<div class="col-md-12">
+    <br>
+    <legend>Estructura</legend>
+    
+            <div class="panel with-nav-tabs panel-default">
+                <div class="panel-heading">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tabID" data-toggle="tab">ID</a></li>
+                            <li><a href="#tabRating" data-toggle="tab">Puntaje</a></li>
+                            <li><a href="#tabDate" data-toggle="tab">Fecha</a></li>
+                            <li><a href="#tabReviewer" data-toggle="tab">Crítico</a></li>
+                            <li><a href="#tabText" data-toggle="tab">Reseña</a></li>
+                        </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tabID">tipoID</div>
+                        <div class="tab-pane fade" id="tabRating">tipoPuntaje</div>
+                        <div class="tab-pane fade" id="tabDate">tipoFecha</div>
+                        <div class="tab-pane fade" id="tabReviewer">tipoCritico</div>
+                        <div class="tab-pane fade" id="tabText">tipoReseña</div>
+                    </div>
+                </div>
+            </div>
+
+</div>
+
+<!-- List -->
+<br>
+<div class=col-md-12>
+    
+    <form id="form-list-movie">
+            <legend>Reseñas</legend>
+    
+    <table class="table table-bordered table-condensed table-hover">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <th>Puntaje</th>
+                <th>Fecha</th>
+                <th>Critico</th>
+                <th>Reseña</th>
+                <th>Administrar</th>
+            </tr>
+                
+        </thead>
+        <tbody id="form-list-movie-body">
+            <tr>
+                <td>id</td>
+                <td>puntaje</td>
+                <td>fecha</td>
+                <td>critico</td>
+                <td>reseña</td>
+                <td>
+                    <a title="view this user" class="btn btn-default btn-sm "> <i class="glyphicon glyphicon-eye-open text-primary"></i> </a>
+                    <a title="edit this user" class="btn btn-default btn-sm "> <i class="glyphicon glyphicon-edit text-primary"></i> </a>
+                    <a title="delete this user" class="btn btn-default btn-sm "> <i class="glyphicon glyphicon-trash text-danger"></i> </a>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+    
+</div>
+        
+<!-- View -->
+<br>
+<div class="col-md-12">
+    
+    <legend>Reseña</legend>
+    
+    <div >
+        
+              <div class2=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>ID:</td>
+                        <td>id</td>
+                      </tr>
+                      <tr>
+                        <td>Puntaje:</td>
+                        <td>puntaje</td>
+                      </tr>
+                      <tr>
+                        <td>Fecha:</td>
+                        <td>fecha</td>
+                      </tr>
+                      <tr>
+                        <td>Critico:</td>
+                        <td>critico</td>
+                      </tr>
+                      <tr>
+                        <td>Reseña:</td>
+                        <td>reseña</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        
+    </div>
+            
+</div>
+
+<!-- Form  -->
+<br>
+<div class="col-md-12">
+
+<form class="form-horizontal" id="form-edit-review">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Añadir reseña</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="review-rating">Puntaje</label>  
+  <div class="col-md-4">
+  <input id="review-rating" name="review-rating" type="text"  class="form-control input-md">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="review-date">Fecha</label>
+  <div class="col-md-4">
+    <input id="review-date" name="review-date" class="form-control" class="form-control input-md">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="review-reviewer">Critico</label>
+  <div class="col-md-4">
+    <input id="review-reviewer" name="review-reviewer" class="form-control" class="form-control input-md">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="review-text">Reseña</label>
+  <div class="col-md-4">
+    <input id="review-text" name="review-text" class="form-control" class="form-control input-md">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="btn-save"></label>
+  <div class="col-md-4">
+    <button id="btn-save" name="btn-save" class="btn btn-success">Guardar</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+</div> 
+<br>
+	    
+	</div>
+</div>
+
+<script src="js/main.js" charset="utf-8"></script>
+</body>
+</html>

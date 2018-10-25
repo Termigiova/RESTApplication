@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Movies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+	<div class="row">
+	    
+	    
+<link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+
+<!-- Structure -->
+
+<div class="col-md-12">
+    <br>
+    <legend>Estructura</legend>
+    
+            <div class="panel with-nav-tabs panel-default">
+                <div class="panel-heading">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tabID" data-toggle="tab">ID</a></li>
+                            <li><a href="#tabTitle" data-toggle="tab">Titulo</a></li>
+                            <li><a href="#tabYear" data-toggle="tab">Año</a></li>
+                            <li><a href="#tabImdb" data-toggle="tab">IMDb</a></li>
+                            <li><a href="#tabType" data-toggle="tab">Tipo</a></li>
+                        </ul>
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tabID">tipoID</div>
+                        <div class="tab-pane fade" id="tabTitle">tipoTitulo</div>
+                        <div class="tab-pane fade" id="tabYear">tipoAño</div>
+                        <div class="tab-pane fade" id="tabImdb">tipoImdb</div>
+                        <div class="tab-pane fade" id="tabType">tipoTipo</div>
+                    </div>
+                </div>
+            </div>
+
+</div>
+
+<!-- List -->
+<br>
+<div class=col-md-12>
+    
+    <form id="form-list-movie">
+            <legend>Peliculas</legend>
+    
+    <table class="table table-bordered table-condensed table-hover">
+        <thead>
+            <tr>
+                <td>Titulo</td>
+                <th>Año</th>
+                <th>IMDb</th>
+                <th>Tipo</th>
+                <th>Administrar</th>
+            </tr>
+                
+        </thead>
+        <tbody id="form-list-movie-body">
+            <tr>
+                <td>titulo</td>
+                <td>año</td>
+                <td>imdb</td>
+                <td>tipo</td>
+                <td>
+                    <a title="view this user" class="btn btn-default btn-sm "> <i class="glyphicon glyphicon-eye-open text-primary"></i> </a>
+                    <a title="edit this user" class="btn btn-default btn-sm "> <i class="glyphicon glyphicon-edit text-primary"></i> </a>
+                    <a title="delete this user" class="btn btn-default btn-sm "> <i class="glyphicon glyphicon-trash text-danger"></i> </a>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+    
+</div>
+        
+<!-- View -->
+<br>
+<div class="col-md-12">
+    
+    <legend>Pelicula</legend>
+    
+    <div >
+        
+              <div class2=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Titulo:</td>
+                        <td>titulo</td>
+                      </tr>
+                      <tr>
+                        <td>Año:</td>
+                        <td>año</td>
+                      </tr>
+                      <tr>
+                        <td>IMDb:</td>
+                        <td>imdb</td>
+                      </tr>
+                      <tr>
+                        <td>Tipo:</td>
+                        <td>tipo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        
+    </div>
+            
+</div>
+
+<!-- Form  -->
+<br>
+<div class="col-md-12">
+
+<form class="form-horizontal" id="form-edit-movie">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Añadir pelicula</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movie-title">Título</label>  
+  <div class="col-md-4">
+  <input id="movie-title" name="movie-title" type="text" placeholder="titulo" class="form-control input-md">
+  <span class="help-block">Titulo completo de la pelicula</span>  
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movie-year">Año</label>
+  <div class="col-md-4">
+    <input id="movie-year" name="movie-year" class="form-control" placeholder="1995" class="form-control input-md">
+    <p class="help-block">Año de estreno</p>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movie-imdb">IMDb</label>
+  <div class="col-md-4">
+    <input id="movie-imdb" name="movie-imdb" class="form-control" placeholder="IMDb" class="form-control input-md">
+    <p class="help-block">Identificador IMDb</p>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movie-type">Tipo</label>
+  <div class="col-md-4">
+    <input id="movie-type" name="movie-type" class="form-control" placeholder="tipo" class="form-control input-md">
+    <p class="help-block">Tipo de pelicula</p>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="btn-save"></label>
+  <div class="col-md-4">
+    <button id="btn-save" name="btn-save" class="btn btn-success">Guardar</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+</div> 
+<br>
+	    
+	</div>
+</div>
+
+<script src="js/main.js" charset="utf-8"></script>
+</body>
+</html>
