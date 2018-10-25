@@ -28,7 +28,20 @@
                             <li class="active"><a href="#tabID" data-toggle="tab">ID</a></li>
                             <li><a href="#tabTitle" data-toggle="tab">Titulo</a></li>
                             <li><a href="#tabYear" data-toggle="tab">Año</a></li>
+                            <li><a href="#tabRated" data-toggle="tab">Clasificación</a></li>
+                            <li><a href="#tabReleased" data-toggle="tab">Estreño</a></li>
+                            <li><a href="#tabRuntime" data-toggle="tab">Duración</a></li>
+                            <li><a href="#tabCountries" data-toggle="tab">Paises</a></li>
+                            <li><a href="#tabGenres" data-toggle="tab">Géneros</a></li>
+                            <li><a href="#tabDirector" data-toggle="tab">Director</a></li>
+                            <li><a href="#tabWriters" data-toggle="tab">Escritores</a></li>
+                            <li><a href="#tabActors" data-toggle="tab">Actores</a></li>
+                            <li><a href="#tabPlot" data-toggle="tab">Trama</a></li>
+                            <li><a href="#tabPoster" data-toggle="tab">Poster</a></li>
                             <li><a href="#tabImdb" data-toggle="tab">IMDb</a></li>
+                            <li><a href="#tabTomato" data-toggle="tab">Tomato</a></li>
+                            <li><a href="#tabMetacritic" data-toggle="tab">Metacritic</a></li>
+                            <li><a href="#tabAwards" data-toggle="tab">Premios</a></li>
                             <li><a href="#tabType" data-toggle="tab">Tipo</a></li>
                         </ul>
                 </div>
@@ -37,7 +50,19 @@
                         <div class="tab-pane fade in active" id="tabID">tipoID</div>
                         <div class="tab-pane fade" id="tabTitle">tipoTitulo</div>
                         <div class="tab-pane fade" id="tabYear">tipoAño</div>
+                        <div class="tab-pane fade" id="tabRated">tipoClasificacion</div>
+                        <div class="tab-pane fade" id="tabReleased">tipoEstreno</div>
+                        <div class="tab-pane fade" id="tabRuntime">tipoDuracion</div>
+                        <div class="tab-pane fade" id="tabCountries">tipoPaises</div>
+                        <div class="tab-pane fade" id="tabGenres">tipoGeneros</div>
+                        <div class="tab-pane fade" id="tabWriters">tipoEscritores</div>
+                        <div class="tab-pane fade" id="tabActors">tipoActores</div>
+                        <div class="tab-pane fade" id="tabPlot">tipoTrama</div>
+                        <div class="tab-pane fade" id="tabPoster">tipoPoster</div>
                         <div class="tab-pane fade" id="tabImdb">tipoImdb</div>
+                        <div class="tab-pane fade" id="tabTomato">tipoTomatoo</div>
+                        <div class="tab-pane fade" id="tabMetacritic">tipoMetacritic</div>
+                        <div class="tab-pane fade" id="tabAwards">tipoAwards</div>
                         <div class="tab-pane fade" id="tabType">tipoTipo</div>
                     </div>
                 </div>
@@ -50,24 +75,50 @@
 <div class=col-md-12>
     
     <form id="form-list-movie">
-            <legend>Peliculas</legend>
+            <legend>Detalles de peliculas</legend>
     
     <table class="table table-bordered table-condensed table-hover">
         <thead>
             <tr>
                 <td>Titulo</td>
                 <th>Año</th>
+                <th>Clasificación</th>
+                <th>Estreno</th>
+                <th>Duración</th>
+                <th>Paises</th>
+                <th>Géneros</th>
+                <th>Director</th>
+                <th>Escritores</th>
+                <th>Actores</th>
+                <th>Trama</th>
+                <th>Poster</th>
                 <th>IMDb</th>
+                <th>Tomato</th>
+                <th>Metacritic</th>
+                <th>Premios</th>
                 <th>Tipo</th>
                 <th>Administrar</th>
             </tr>
                 
         </thead>
-        <tbody id="form-list-movie-body">
+        <tbody id="form-list-movieDetails-body">
             <tr>
                 <td>titulo</td>
                 <td>año</td>
+                <td>clas</td>
+                <td>estreno</td>
+                <td>dur</td>
+                <td>paises</td>
+                <td>gen</td>
+                <td>dir</td>
+                <td>esc</td>
+                <td>act</td>
+                <td>trama</td>
+                <td>poster</td>
                 <td>imdb</td>
+                <td>tomato</td>
+                <td>meta</td>
+                <td>premios</td>
                 <td>tipo</td>
                 <td>
                     <a title="view this user" class="btn btn-default btn-sm "> <i class="glyphicon glyphicon-eye-open text-primary"></i> </a>
@@ -86,7 +137,7 @@
 <br>
 <div class="col-md-12">
     
-    <legend>Pelicula</legend>
+    <legend>Detalles de pelicula</legend>
     
     <div >
         
@@ -102,9 +153,60 @@
                         <td>año</td>
                       </tr>
                       <tr>
+                        <td>Clasificación:</td>
+                        <td>clas</td>
+                      </tr>
+                      <tr>
+                        <td>Estreno:</td>
+                        <td>est</td>
+                      </tr>
+                      <tr>
+                        <td>Duración:</td>
+                        <td>dur</td>
+                      </tr>
+                      <tr>
+                        <td>Paises:</td>
+                        <td>paises</td>
+                      </tr>
+                      <tr>
+                        <td>Géneros:</td>
+                        <td>gen</td>
+                      </tr>
+                      <tr>
+                        <td>Director:</td>
+                        <td>dir</td>
+                      </tr>
+                      <tr>
+                        <td>Escritores:</td>
+                        <td>esc</td>
+                      </tr>
+                      <tr>
+                        <td>Actores:</td>
+                        <td>act</td>
+                      </tr>
+                      <tr>
+                        <td>Trama:</td>
+                        <td>trama</td>
+                      </tr>
+                      <tr>
+                        <td>Poster:</td>
+                        <td>poster</td>
+                      </tr>
+                      <tr>
                         <td>IMDb:</td>
                         <td>imdb</td>
                       </tr>
+                      <tr>
+                        <td>Tomato:</td>
+                        <td>tomato</td>
+                      </tr>
+                      <tr>
+                        <td>Metacritic:</td>
+                        <td>meta</td>
+                      </tr>
+                      <tr>
+                        <td>Premios:</td>
+                        <td>premios</td>
                       <tr>
                         <td>Tipo:</td>
                         <td>tipo</td>
@@ -121,42 +223,122 @@
 <br>
 <div class="col-md-12">
 
-<form class="form-horizontal" id="form-edit-movie">
+<form class="form-horizontal" id="form-edit-movieDetails">
 <fieldset>
 
 <!-- Form Name -->
-<legend>Añadir pelicula</legend>
+<legend>Añadir detalles de pelicula</legend>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="movie-title">Título</label>  
+  <label class="col-md-4 control-label" for="movieDetails-title">Título</label>  
   <div class="col-md-4">
-  <input id="movie-title" name="movie-title" type="text" placeholder="titulo" class="form-control input-md">
-  <span class="help-block">Titulo completo de la pelicula</span>  
+  <input id="movieDetails-title" name="movieDetails-title" type="text" class="form-control input-md">
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="movie-year">Año</label>
+  <label class="col-md-4 control-label" for="movieDetails-year">Año</label>
   <div class="col-md-4">
-    <input id="movie-year" name="movie-year" class="form-control" placeholder="1995" class="form-control input-md">
-    <p class="help-block">Año de estreno</p>
+    <input id="movieDetails-year" name="movieDetails-year" class="form-control" class="form-control input-md">
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="movie-imdb">IMDb</label>
+  <label class="col-md-4 control-label" for="movieDetails-rated">Puntaje</label>
   <div class="col-md-4">
-    <input id="movie-imdb" name="movie-imdb" class="form-control" placeholder="IMDb" class="form-control input-md">
-    <p class="help-block">Identificador IMDb</p>
+    <input id="movieDetails-rated" name="movieDetails-rated" class="form-control" class="form-control input-md">
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label" for="movie-type">Tipo</label>
+  <label class="col-md-4 control-label" for="movieDetails-released">Estreno</label>
   <div class="col-md-4">
-    <input id="movie-type" name="movie-type" class="form-control" placeholder="tipo" class="form-control input-md">
-    <p class="help-block">Tipo de pelicula</p>
+    <input id="movieDetails-released" name="movieDetails-released" class="form-control" class="form-control input-md">
+  </div>
+</div>
+    <div class="form-group">
+  <label class="col-md-4 control-label" for="movieDetails-runtime">Duración</label>  
+  <div class="col-md-4">
+  <input id="movieDetails-runtime" name="movieDetails-runtime" type="text" class="form-control input-md">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movieDetails-countries">Paises</label>
+  <div class="col-md-4">
+    <input id="movieDetails-countries" name="movieDetails-countries" class="form-control" class="form-control input-md">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movieDetails-genres">Géneros</label>
+  <div class="col-md-4">
+    <input id="movieDetails-genres" name="movieDetails-genres" class="form-control" class="form-control input-md">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movieDetails-director">Director</label>
+  <div class="col-md-4">
+    <input id="movieDetails-director" name="movieDetails-director" class="form-control" class="form-control input-md">
+  </div>
+</div>
+    <div class="form-group">
+  <label class="col-md-4 control-label" for="movieDetails-writers">Escritores</label>  
+  <div class="col-md-4">
+  <input id="movieDetails-writers" name="movieDetails-writers" type="text" class="form-control input-md">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movieDetails-actors">Actores</label>
+  <div class="col-md-4">
+    <input id="movieDetails-actors" name="movieDetails-actors" class="form-control" class="form-control input-md">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movieDetails-plot">Trama</label>
+  <div class="col-md-4">
+    <input id="movieDetails-plot" name="movieDetails-plot" class="form-control" class="form-control input-md">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movieDetails-poster">Poster</label>
+  <div class="col-md-4">
+    <input id="movieDetails-poster" name="movieDetails-poster" class="form-control" class="form-control input-md">
+  </div>
+</div>
+    <div class="form-group">
+  <label class="col-md-4 control-label" for="movieDetails-imdb">IMDb</label>  
+  <div class="col-md-4">
+  <input id="movieDetails-imdb" name="movieDetails-imdb" type="text" class="form-control input-md">
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movieDetails-tomato">Tomato</label>
+  <div class="col-md-4">
+    <input id="movieDetails-tomato" name="movieDetails-tomato" class="form-control" class="form-control input-md">
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movieDetails-metacritic">Metacritic</label>
+  <div class="col-md-4">
+    <input id="movieDetails-metacritic" name="movieDetails-metacritic" class="form-control" class="form-control input-md">
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movieDetails-awards">Premios</label>
+  <div class="col-md-4">
+    <input id="movieDetails-awards" name="movieDetails-awards" class="form-control" class="form-control input-md">
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="movieDetails-type">Tipo</label>
+  <div class="col-md-4">
+    <input id="movieDetails-type" name="movieDetails-type" class="form-control" class="form-control input-md">
   </div>
 </div>
 
