@@ -14,11 +14,6 @@ public class MovieDetailController {
     @RequestMapping(method = RequestMethod.GET, value = "/movieDetails")
     public Iterable<MovieDetail> movieDetail() { return movieDetailRepository.findAll(); }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/movieDetails/{id}")
-    public MovieDetail getMovie(@PathVariable String id) {
-        return movieDetailRepository.findById(id).get();
-    }
-
     @RequestMapping(method = RequestMethod.POST, value = "/movieDetails")
     public String save(@RequestBody MovieDetail movieDetail) {
         movieDetailRepository.save(movieDetail);
@@ -36,6 +31,14 @@ public class MovieDetailController {
 
         movieDetailRepository.save(movieDetail);
         return movieDetail;
+    }
+
+    @RequestMapping(method = RequestMethod.DELETE, value = "movieDetails/{id}")
+    public String delete(@PathVariable String id) {
+        MovieDetail movieDetail = movieDetailRepository.findById(id).get();
+        movieDetailRepository.delete(movieDetail);
+
+        return "Movie Details deleted";
     }
 
 }
