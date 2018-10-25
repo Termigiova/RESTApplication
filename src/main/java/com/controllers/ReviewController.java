@@ -14,6 +14,11 @@ public class ReviewController {
     @RequestMapping(method = RequestMethod.GET, value = "/reviews")
     public Iterable<Review> reviews() { return reviewsRepository.findAll(); }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/reviews/movies/{id}")
+    public Review getMovie(@PathVariable String id) {
+        return reviewsRepository.findById(id).get();
+    }
+
     @RequestMapping(method = RequestMethod.POST, value = "/reviews")
     public String save(@RequestBody Review review) {
         reviewsRepository.save(review);
